@@ -142,8 +142,8 @@ function onFormSubmit(event) {
   } if (!accept.checked) {
     alert("Check checkbox")
     return;
-  } console.log(userNameValue);
-  
+  } console.log({userName:userNameValue});
+  form.reset
 
 }
 
