@@ -160,3 +160,24 @@ function addNameToSpan(event) {
 
 
 
+// Збереження об'єкта
+function saveObject(key, obj) {
+  localStorage.setItem(key, JSON.stringify(obj));
+}
+
+// Отримання об'єкта
+function getObject(key) {
+  const data = localStorage.getItem(key);
+  return data ? JSON.parse(data) : null;
+}
+
+// Видалення об'єкта
+function removeObject(key) {
+  localStorage.removeItem(key);
+}
+
+const user = { name: 'John', age: 30 };
+saveObject('user', user);
+console.log(getObject('user'));
+removeObject('user');
+console.log(getObject('user'));
